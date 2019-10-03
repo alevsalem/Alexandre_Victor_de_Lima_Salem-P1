@@ -1,0 +1,38 @@
+def variaveis():
+
+    print('Calculadora de equações do segundo grau')
+
+    a = 0
+    while(a == 0):
+        a = float(input('Insira um valor a variável "a" da equação:\n'))
+   
+        if(a == 0):
+            print('ERRO') # A equação deixará de ser do segundo grau.
+
+    b = float(input('Insira um valor para a variável "b" da equação:\n'))
+
+    c = float(input('Insira um valor para a variável "c" da equação:\n'))
+   
+    bhaskara(a,b,c)
+
+def bhaskara(a,b,c):
+   
+    delta_i = (b ** 2) - (4 * a *  c)
+
+    delta_f = delta_i ** (1/2)
+
+    raiz_1 = (-b + delta_f)/(2 * a)  
+
+    raiz_2 = (-b - delta_f)/(2 * a)
+
+    if(delta_i >= 0):
+        print('Para equação',a,'x ** 2 +',b,'x +',c,'\n Raiz 1 =',raiz_1,'\n Raiz 2 =',raiz_2)
+        return 0
+   
+    else:
+   
+        print('Para equação',a,'x ** 2 +',b,'x +',c,'\n Raiz 1 =',raiz_1,'\n Raiz 2 =',raiz_2)
+	  
+        return 1
+	  
+variaveis()
